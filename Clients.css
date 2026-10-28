@@ -1,0 +1,804 @@
+
+/* ==========================================
+   OUR TRUSTED CLIENTS
+========================================== */
+
+.clients-section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 65px 5% 70px;
+    overflow: hidden;
+    background: linear-gradient(
+        120deg,
+        #eff6ff 0%,
+        #e7f0ff 55%,
+        #e1edff 100%
+    );
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clients-section *,
+.clients-section *::before,
+.clients-section *::after {
+    box-sizing: border-box;
+}
+
+/* HEADING */
+
+.clients-section .h1teg {
+    text-align: center;
+    margin: 0 auto 70px;
+}
+
+.clients-section .h1teg h1 {
+    margin: 0 0 15px;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.3px;
+    background: linear-gradient(
+        90deg,
+        #203e91,
+        #6254ff,
+        #a21cff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.clients-section .h1teg p {
+    margin: 0;
+    color: #1745bd;
+    font-size: clamp(15px, 1.7vw, 20px);
+    line-height: 1.7;
+}
+
+/* NATIONAL / INTERNATIONAL BUTTONS */
+
+.clients-section .NI {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 52px;
+    padding: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid #8ba4ff;
+    border-radius: 50px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(25, 53, 115, 0.12);
+}
+
+.clients-section .NI button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 40px;
+    background: transparent;
+    color: #173fa9;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clients-section .NI button img {
+    width: 21px;
+    height: 21px;
+    object-fit: contain;
+}
+
+.clients-section .NI button:hover {
+    background: #edf2ff;
+}
+
+.clients-section .NI button.active {
+    color: #fff;
+    background: #203e91;
+    box-shadow: 0 4px 12px rgba(32, 62, 145, 0.24);
+}
+
+.clients-section .NI button.active:hover {
+    background: #172f76;
+}
+
+/* ==========================================
+   NATIONAL CLIENT GRID
+========================================== */
+
+.clients-section .NC,
+.clients-section .NC + div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 45px 35px;
+    align-items: stretch;
+}
+
+/* LOGO CARDS */
+
+.clients-section .box50,
+.clients-section .box10 {
+    width: 80%;
+    min-width: 0;
+    min-height: 185px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #171717;
+    border-radius: 17px;
+    background: #fff;
+    overflow: hidden;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+    animation: clientFadeIn 0.45s ease both;
+}
+
+.clients-section .box50:hover,
+.clients-section .box10:hover {
+    transform: translateY(-7px);
+    border-color: #456bff;
+    box-shadow: 0 12px 28px rgba(35, 69, 160, 0.16);
+}
+
+/* LINKS INSIDE CARDS */
+
+.clients-section .box50 a,
+.clients-section .box10 a {
+    width: 100%;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* CLIENT LOGOS */
+
+.clients-section .box50 img,
+.clients-section .box10 img {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    height: 75px;
+    object-fit: contain;
+    transition: transform 0.35s ease;
+}
+
+.clients-section .box50:hover img,
+.clients-section .box10:hover img {
+    transform: scale(1.07);
+}
+
+/* COMPANY NAMES */
+
+.clients-section .box50 p,
+.clients-section .box10 p {
+    margin: 0;
+    color: #203e91;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: all 0.3s ease;
+}
+
+.clients-section .box50:hover p,
+.clients-section .box10:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CLIENT COUNT */
+
+.clients-section > div:last-child {
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+}
+
+.clients-section > div:last-child button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 28px;
+    border: 0;
+    border-radius: 40px;
+    background: #203e91;
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(32, 62, 145, 0.18);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.clients-section > div:last-child button p {
+    margin: 0;
+}
+
+/* ENTRANCE ANIMATION */
+
+@keyframes clientFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+    .clients-section {
+        padding: 55px 4%;
+    }
+
+    .clients-section .NC,
+    .clients-section .NC + div {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+    .clients-section .box50,
+    .clients-section .box10 {
+        min-height: 165px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .clients-section {
+        padding: 45px 18px;
+    }
+
+    .clients-section .h1teg {
+        margin-bottom: 38px;
+    }
+
+    .clients-section .NI {
+        margin-bottom: 35px;
+        padding: 5px;
+        gap: 2px;
+    }
+
+    .clients-section .NI button {
+        padding: 12px 13px;
+        gap: 6px;
+        font-size: 13px;
+    }
+
+    .clients-section .NI button img {
+        width: 17px;
+        height: 17px;
+    }
+
+    .clients-section .NC,
+    .clients-section .NC + div {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 14px;
+    }
+
+    .clients-section .box50,
+    .clients-section .box10 {
+        min-height: 140px;
+        padding: 10px;
+        border-radius: 14px;
+    }
+
+    .clients-section .box50 a,
+    .clients-section .box10 a {
+        min-height: 115px;
+        gap: 8px;
+    }
+
+    .clients-section .box50 img,
+    .clients-section .box10 img {
+        max-width: 115px;
+        height: 60px;
+    }
+
+    .clients-section .box50 p,
+    .clients-section .box10 p {
+        font-size: 12px;
+        opacity: 1;
+        transform: none;
+    }
+
+    .clients-section .box50:hover,
+    .clients-section .box10:hover {
+        transform: translateY(-3px);
+    }
+
+    .clients-section > div:last-child {
+        margin-top: 35px;
+    }
+}
+
+/* VERY SMALL MOBILE */
+
+@media (max-width: 360px) {
+    .clients-section {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .clients-section .NI button {
+        padding: 10px 8px;
+        font-size: 11px;
+    }
+
+    .clients-section .NC,
+    .clients-section .NC + div {
+        gap: 12px;
+    }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    .clients-section *,
+    .clients-section *::before,
+    .clients-section *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+
+/* ==========================================
+   BUILDING LASTING PARTNERSHIPS
+========================================== */
+
+.partnership-section {
+    width: 100%;
+    padding: 65px 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: stretch;
+
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.partnership-section * {
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   LEFT SECTION
+========================================== */
+
+.partnership-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.partnership-left h1 {
+    margin: 0 0 16px;
+
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: 800;
+    line-height: 1.25;
+
+    background: linear-gradient(
+        90deg,
+        #203e91,
+        #284ee0
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.partnership-left > p {
+    margin: 0 0 32px;
+
+    color: #1745bd;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   STATISTICS GRID
+========================================== */
+
+.stats-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Individual statistics card */
+
+.stat-card {
+    min-height: 124px;
+    padding: 18px 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #eff6ff;
+    border: 1px solid transparent;
+    border-radius: 12px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Statistics card hover */
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: #e4efff;
+    border-color: #c7dcff;
+
+    box-shadow: 0 8px 20px rgba(32, 62, 145, 0.09);
+}
+
+/* Statistics icons */
+
+.stat-card img {
+    width: 30px;
+    height: 30px;
+
+    margin-bottom: 10px;
+
+    object-fit: contain;
+}
+
+/* Statistics numbers */
+
+.stat-card h2 {
+    margin: 0 0 4px;
+
+    color: #203e91;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* Statistics labels */
+
+.stat-card span {
+    color: #1745ff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   RIGHT COMMITMENT CARD
+========================================== */
+
+.commitment-card {
+    width: 100%;
+    padding: 34px 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(
+        135deg,
+        #edf5ff 0%,
+        #dfecff 100%
+    );
+
+    border: 1px solid #c6dcff;
+    border-radius: 17px;
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.09);
+
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.commitment-card:hover {
+    box-shadow: 0 12px 25px rgba(32, 62, 145, 0.12);
+}
+
+/* ==========================================
+   COMMITMENT HEADER
+========================================== */
+
+.commitment-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding-bottom: 25px;
+    margin-bottom: 18px;
+
+    border-bottom: 1px solid #d7e5fb;
+}
+
+/* Blue icon container */
+
+.commitment-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #155df5,
+        #4b9bff
+    );
+
+    border-radius: 11px;
+}
+
+.commitment-icon i {
+    font-size: 20px;
+}
+
+/* Header title */
+
+.commitment-header h2 {
+    margin: 0 0 5px;
+
+    color: #173fa9;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Header subtitle */
+
+.commitment-header p {
+    margin: 0;
+
+    color: #1745bd;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   COMMITMENT LIST
+========================================== */
+
+.commitment-list {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    list-style: none;
+}
+
+.commitment-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #1745bd;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Green check icons */
+
+.commitment-list li i {
+    flex-shrink: 0;
+
+    color: #00b853;
+    font-size: 19px;
+}
+
+/* ==========================================
+   PARTNERSHIP BUTTON
+========================================== */
+
+.partnership-btn {
+    width: 100%;
+    min-height: 49px;
+
+    margin-top: auto;
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #203e91;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(32, 62, 145, 0.15);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.partnership-btn:hover {
+    background: #172f76;
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(32, 62, 145, 0.22);
+}
+
+.partnership-btn:active {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 1024px) {
+
+    .partnership-section {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        padding: 45px 3%;
+    }
+
+    .partnership-left h1 {
+        font-size: 29px;
+    }
+
+    .partnership-left > p {
+        font-size: 15px;
+    }
+
+    .stats-grid {
+        gap: 16px;
+    }
+
+    .stat-card {
+        min-height: 115px;
+    }
+
+    .commitment-card {
+        padding: 25px 22px;
+    }
+
+    .commitment-list {
+        gap: 16px;
+    }
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .partnership-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+        padding: 35px 18px;
+    }
+
+    .partnership-left h1 {
+        font-size: 30px;
+    }
+
+    .partnership-left > p {
+        margin-bottom: 24px;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .stat-card {
+        min-height: 115px;
+        padding: 15px 8px;
+    }
+
+    .stat-card h2 {
+        font-size: 23px;
+    }
+
+    .stat-card span {
+        font-size: 13px;
+    }
+
+    .commitment-card {
+        padding: 25px 20px;
+    }
+
+    .commitment-header {
+        padding-bottom: 20px;
+        margin-bottom: 18px;
+    }
+
+    .commitment-header h2 {
+        font-size: 19px;
+    }
+
+    .commitment-list {
+        gap: 17px;
+    }
+
+    .commitment-list li {
+        font-size: 14px;
+    }
+
+    .partnership-btn {
+        margin-top: 30px;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+    .partnership-section {
+        padding: 28px 12px;
+    }
+
+    .partnership-left h1 {
+        font-size: 26px;
+    }
+
+    .stats-grid {
+        gap: 10px;
+    }
+
+    .stat-card h2 {
+        font-size: 21px;
+    }
+
+    .commitment-card {
+        padding: 20px 14px;
+    }
+
+    .commitment-list li {
+        gap: 9px;
+        font-size: 13px;
+    }
+}

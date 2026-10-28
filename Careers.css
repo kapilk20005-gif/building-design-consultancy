@@ -1,0 +1,985 @@
+/* ==============================
+   CAREER SECTION
+============================== */
+
+.career-section {
+    width: 100%;
+    min-height: 500px;
+    padding: 100px 20px 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main Content */
+
+.career-content {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Heading */
+
+.career-content h1 {
+    margin: 0 0 22px;
+    color: #111111;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -2px;
+}
+
+/* Description */
+
+.career-content p {
+    max-width: 680px;
+    margin: 0 auto 32px;
+    color: #737373;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Buttons Container */
+
+.career-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Common Button Style */
+
+.career-btn {
+    min-height: 50px;
+    padding: 14px 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #203e91;
+    border-radius: 11px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Primary Button */
+
+.primary-btn {
+    color: #ffffff;
+    background: #203e91;
+}
+
+.primary-btn:hover {
+    background: #172f76;
+    border-color: #172f76;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(32, 62, 145, 0.2);
+}
+
+/* Secondary Button */
+
+.secondary-btn {
+    color: #203e91;
+    background: #ffffff;
+}
+
+.secondary-btn:hover {
+    color: #ffffff;
+    background: #203e91;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(32, 62, 145, 0.15);
+}
+
+/* Next Section Background */
+
+.career-next-section {
+    width: 100%;
+    min-height: 250px;
+    padding: 60px 5%;
+    background: #f7f9fc;
+    box-sizing: border-box;
+}
+
+/* ==============================
+   TABLET RESPONSIVE
+============================== */
+
+@media (max-width: 768px) {
+
+    .career-section {
+        min-height: 450px;
+        padding: 80px 25px;
+    }
+
+    .career-content h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+
+    .career-content p {
+        font-size: 17px;
+    }
+
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 480px) {
+
+    .career-section {
+        min-height: auto;
+        padding: 75px 20px 85px;
+    }
+
+    .career-content h1 {
+        font-size: 34px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+    }
+
+    .career-content p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 28px;
+    }
+
+    .career-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .career-btn {
+        width: 100%;
+        max-width: 280px;
+        min-height: 48px;
+        font-size: 14px;
+    }
+
+}
+
+
+
+/* =====================================
+   OPEN POSITIONS SECTION
+===================================== */
+
+.open-positions {
+    width: 100%;
+    padding: 65px 9% 70px;
+    box-sizing: border-box;
+    background: #f7f9fc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.open-positions *,
+.open-positions *::before,
+.open-positions *::after {
+    box-sizing: border-box;
+}
+
+/* Heading */
+
+.positions-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.positions-heading h2 {
+    margin: 0 0 18px;
+    color: #111827;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.positions-heading p {
+    margin: 0;
+    color: #737373;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Grid */
+
+.positions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px 28px;
+    align-items: stretch;
+}
+
+/* Job Card */
+
+.job-card {
+    min-width: 0;
+    padding: 18px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 25px rgba(0, 0, 0, 0.13);
+}
+
+/* Job Badges */
+
+.job-badges {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.job-type,
+.job-status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.job-type {
+    color: #2453c5;
+    background: #dbeafe;
+}
+
+.job-status {
+    color: #087443;
+    background: #d8fbe7;
+}
+
+/* Company Logo */
+
+.job-logo {
+    height: 105px;
+    margin: 14px 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.job-logo img {
+    display: block;
+    width: 100%;
+    max-width: 175px;
+    height: 75px;
+    object-fit: contain;
+}
+
+/* Decorative Icon */
+
+.job-icon {
+    width: 32px;
+    height: 26px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: #f3e8ff;
+    font-size: 13px;
+}
+
+/* Job Information */
+
+.job-info {
+    margin-top: auto;
+}
+
+.job-info h3 {
+    margin: 0 0 8px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 750;
+    line-height: 1.4;
+}
+
+.job-info p {
+    margin: 0 0 16px;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Buttons */
+
+.job-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.apply-btn,
+.details-btn {
+    min-height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 11px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Apply Now */
+
+.apply-btn {
+    color: #ffffff;
+    background: #2160ff;
+    border: 1px solid #2160ff;
+}
+
+.apply-btn:hover {
+    background: #1649d8;
+    border-color: #1649d8;
+}
+
+/* Details */
+
+.details-btn {
+    color: #172033;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.details-btn:hover {
+    color: #2160ff;
+    background: #eff4ff;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1024px) {
+
+    .open-positions {
+        padding: 55px 5%;
+    }
+
+    .positions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .open-positions {
+        padding: 45px 18px;
+    }
+
+    .positions-heading {
+        margin-bottom: 30px;
+    }
+
+    .positions-heading h2 {
+        font-size: 27px;
+    }
+
+    .positions-heading p {
+        font-size: 15px;
+    }
+
+    .positions-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .job-card {
+        padding: 18px;
+    }
+
+    .job-logo {
+        height: 95px;
+    }
+
+    .job-info h3 {
+        font-size: 16px;
+    }
+
+    .job-actions {
+        gap: 8px;
+    }
+
+}
+
+
+
+
+
+
+/* =====================================
+   WHY JOIN OUR TEAM
+===================================== */
+
+.why-join-section {
+    width: 100%;
+    padding: 100px 5% 80px;
+    box-sizing: border-box;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.why-join-section *,
+.why-join-section *::before,
+.why-join-section *::after {
+    box-sizing: border-box;
+}
+
+
+/* =====================================
+   SECTION HEADER
+===================================== */
+
+.why-join-header {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto 55px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 45px;
+}
+
+.why-join-header h2 {
+    margin: 0;
+    color: #111111;
+    font-size: clamp(32px, 4vw, 46px);
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.why-join-header > p {
+    margin: 0;
+    color: #707070;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+.why-join-content {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 2fr 0.95fr;
+    gap: 28px;
+    align-items: stretch;
+}
+
+
+/* =====================================
+   LARGE TEAM IMAGE
+===================================== */
+
+.why-join-main-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.why-join-main-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.why-join-main-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =====================================
+   RIGHT SIDE
+===================================== */
+
+.why-join-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+
+/* =====================================
+   INNOVATION CARD
+===================================== */
+
+.innovation-card {
+    width: 100%;
+    padding: 28px;
+    background: #f5f5f5;
+    border-radius: 15px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.innovation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Innovation Icon */
+
+.innovation-icon {
+    width: 45px;
+    height: 45px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #111111;
+    font-size: 30px;
+}
+
+.innovation-card h3 {
+    margin: 0 0 12px;
+    color: #111111;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.innovation-card p {
+    margin: 0 0 25px;
+    color: #707070;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.innovation-card a {
+    display: inline-block;
+    color: #165dff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.innovation-card a:hover {
+    color: #203e91;
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   OFFICE IMAGE
+===================================== */
+
+.why-join-office-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.why-join-office-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.why-join-office-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .why-join-section {
+        padding: 70px 4%;
+    }
+
+    .why-join-header {
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .why-join-content {
+        grid-template-columns: 1.5fr 1fr;
+        gap: 20px;
+    }
+
+    .why-join-main-image {
+        height: 450px;
+    }
+
+    .innovation-card {
+        padding: 22px;
+    }
+
+    .why-join-office-image {
+        height: 250px;
+    }
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 650px) {
+
+    .why-join-section {
+        padding: 50px 18px;
+    }
+
+    .why-join-header {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 30px;
+    }
+
+    .why-join-header h2 {
+        font-size: 32px;
+    }
+
+    .why-join-header > p {
+        font-size: 15px;
+    }
+
+    .why-join-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .why-join-main-image {
+        height: 350px;
+    }
+
+    .why-join-right {
+        gap: 20px;
+    }
+
+    .innovation-card {
+        padding: 25px;
+    }
+
+    .innovation-icon {
+        margin-left: 0;
+    }
+
+    .why-join-office-image {
+        height: 280px;
+    }
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 380px) {
+
+    .why-join-header h2 {
+        font-size: 28px;
+    }
+
+    .why-join-main-image {
+        height: 260px;
+    }
+
+    .innovation-card {
+        padding: 20px;
+    }
+
+    .why-join-office-image {
+        height: 230px;
+    }
+}
+
+
+
+
+
+
+
+/* ===================================
+   TRUSTED COMPANIES SECTION
+=================================== */
+
+.trusted-companies {
+    width: 100%;
+    padding: 35px 5% 90px;
+    box-sizing: border-box;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.trusted-title {
+    margin: 0 0 30px;
+    text-align: center;
+    color: #111111;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.trusted-logos {
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+}
+
+.trusted-logos img {
+    width: 100px;
+    height: 45px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.trusted-logos img:hover {
+    transform: scale(1.1);
+}
+
+
+/* ===================================
+   OUR IMPACT SECTION
+=================================== */
+
+.impact-section {
+    width: 100%;
+    padding: 25px 5% 70px;
+    box-sizing: border-box;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.impact-container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 60px 65px;
+    box-sizing: border-box;
+    background: #f5f5f5;
+    border-radius: 16px;
+}
+
+
+/* Heading */
+
+.impact-container h2 {
+    margin: 0 0 15px;
+    color: #111111;
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+/* Description */
+
+.impact-description {
+    max-width: 650px;
+    margin: 0 0 40px;
+    color: #777777;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Statistics Grid */
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+
+
+/* Individual Statistics */
+
+.impact-card {
+    text-align: center;
+}
+
+.impact-card p {
+    margin: 0 0 18px;
+    color: #111111;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.impact-card h3 {
+    margin: 0;
+    color: #111111;
+    font-size: clamp(30px, 3.5vw, 46px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/* ===================================
+   TABLET RESPONSIVE
+=================================== */
+
+@media (max-width: 900px) {
+
+    .trusted-companies {
+        padding: 30px 4% 65px;
+    }
+
+    .trusted-logos {
+        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .trusted-logos img {
+        width: 85px;
+    }
+
+    .impact-section {
+        padding: 20px 4% 50px;
+    }
+
+    .impact-container {
+        padding: 45px 35px;
+    }
+
+    .impact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 35px;
+    }
+}
+
+
+/* ===================================
+   MOBILE RESPONSIVE
+=================================== */
+
+@media (max-width: 600px) {
+
+    .trusted-companies {
+        padding: 30px 18px 50px;
+    }
+
+    .trusted-title {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .trusted-logos {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px 15px;
+    }
+
+    .trusted-logos img {
+        width: 100%;
+        max-width: 85px;
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    .impact-section {
+        padding: 15px 18px 40px;
+    }
+
+    .impact-container {
+        padding: 35px 20px;
+        border-radius: 12px;
+    }
+
+    .impact-container h2 {
+        font-size: 27px;
+    }
+
+    .impact-description {
+        margin-bottom: 30px;
+        font-size: 14px;
+    }
+
+    .impact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 15px;
+    }
+
+    .impact-card p {
+        margin-bottom: 12px;
+        font-size: 13px;
+    }
+
+    .impact-card h3 {
+        font-size: 32px;
+    }
+}
+
+
+/* ===================================
+   VERY SMALL MOBILE
+=================================== */
+
+@media (max-width: 360px) {
+
+    .impact-container {
+        padding: 30px 14px;
+    }
+
+    .impact-container h2 {
+        font-size: 24px;
+    }
+
+    .impact-grid {
+        gap: 25px 10px;
+    }
+
+    .impact-card p {
+        font-size: 12px;
+    }
+
+    .impact-card h3 {
+        font-size: 28px;
+    }
+}

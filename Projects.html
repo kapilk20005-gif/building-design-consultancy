@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Projects.css">
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+
+  <main class="portfolio">
+    <section class="portfolio-section">
+      <header class="portfolio-header">
+        <h1>Our Portfolio</h1>
+        <p>A curated collection of our landmark projects, showcasing innovation, precision, and excellence in
+          engineering.</p>
+      </header>
+
+      <div class="main-tabs" aria-label="Portfolio view">
+        <button class="main-tab active" data-view="type">Projects By Type</button>
+        <button class="main-tab" data-view="international">International Projects</button>
+      </div>
+
+      <div class="filters" id="categoryFilters" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-category="Tall Structures">Tall Structures</button>
+        <button class="filter-btn" data-category="Commercial">Commercial</button>
+        <button class="filter-btn" data-category="Institutional Projects">Institutional Projects</button>
+        <button class="filter-btn" data-category="Residential Projects">Residential Projects</button>
+        <button class="filter-btn" data-category="Industrial Projects">Industrial Projects</button>
+        <button class="filter-btn" data-category="Hotel Projects">Hotel Projects</button>
+        <button class="filter-btn" data-category="Hospitals">Hospitals</button>
+        <button class="filter-btn" data-category="Sports Projects">Sports Projects</button>
+        <button class="filter-btn" data-category="Public Projects">Public Projects</button>
+        <button class="filter-btn" data-category="Design and Bid Projects">Design and Bid Projects</button>
+        <button class="filter-btn" data-category="Malls">Malls</button>
+        <button class="filter-btn" data-category="Records">Records</button>
+      </div>
+      <p class="results-message" id="resultsMessage" aria-live="polite"></p>
+      <div class="project-grid" id="projectGrid">
+        <article class="project-card" data-category="Tall Structures" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/ArihantAspire.avif" alt="Arihant Aspire" loading="lazy">
+          </div>
+          <h2 class="project-title">Arihant Aspire</h2>
+        </article>
+        <article class="project-card" data-category="Tall Structures" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/BhandaryVertica.avif" alt="Bhandary Vertica" loading="lazy">
+          </div>
+          <h2 class="project-title">Bhandary Vertica</h2>
+        </article>
+        <article class="project-card" data-category="Tall Structures" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/BoulevardHeights.avif" alt="Boulevard Heights" loading="lazy">
+          </div>
+          <h2 class="project-title">Boulevard Heights</h2>
+        </article>
+        <article class="project-card" data-category="Tall Structures" data-type="international">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/DohaCityCenter.avif" alt="Doha City Center" loading="lazy">
+          </div>
+          <h2 class="project-title">Doha City Center</h2>
+        </article>
+        <article class="project-card" data-category="Tall Structures" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/ICON-Jacobcircle_1.avif" alt="ICON - Jacob circle" loading="lazy">
+          </div>
+          <h2 class="project-title">ICON - Jacob circle</h2>
+        </article>
+        <article class="project-card" data-category="Tall Structures" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/KanakiaLevels.avif" alt="Kanakia Levels" loading="lazy">
+          </div>
+          <h2 class="project-title">Kanakia Levels</h2>
+        </article>
+        <article class="project-card" data-category="Tall Structures" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/LotusSkyGarden.avif" alt="Lotus Sky Garden" loading="lazy">
+          </div>
+          <h2 class="project-title">Lotus Sky Garden</h2>
+        </article>
+        <article class="project-card" data-category="Tall Structures" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/NorthernHills.avif" alt="Northern Hills" loading="lazy">
+          </div>
+          <h2 class="project-title">Northern Hills</h2>
+        </article>
+        <article class="project-card" data-category="Tall Structures" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/SKSPlanet.avif" alt="Planet SKS" loading="lazy">
+          </div>
+          <h2 class="project-title">Planet SKS</h2>
+        </article>
+        <article class="project-card" data-category="Tall Structures" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/PrinceAgaKhan.avif" alt="Prince Aga Khan" loading="lazy">
+          </div>
+          <h2 class="project-title">Prince Aga Khan</h2>
+        </article>
+        <article class="project-card" data-category="Tall Structures" data-type="international">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/PSPFCommercialBuilding.avif" alt="PSPF Commercial Building" loading="lazy">
+          </div>
+          <h2 class="project-title">PSPF Commercial Building</h2>
+        </article>
+        <article class="project-card" data-category="Tall Structures" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/WestlineSignature.avif" alt="Westline Signature" loading="lazy">
+          </div>
+          <h2 class="project-title">Westline Signature</h2>
+        </article>
+      </div>
+
+       <p class="results-message" id="resultsMessage" aria-live="polite"></p>
+      <div class="project-grid" id="projectGrid">
+        <article class="project-card" data-category="Commercial" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/ArihantAspire.avif" alt="Arihant Aspire" loading="lazy">
+          </div>
+          <h2 class="project-title">Arihant Aspire</h2>
+        </article>
+        <article class="project-card" data-category="Commercial" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/BhandaryVertica.avif" alt="Bhandary Vertica" loading="lazy">
+          </div>
+          <h2 class="project-title">Bhandary Vertica</h2>
+        </article>
+        <article class="project-card" data-category="Commercial" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/BoulevardHeights.avif" alt="Boulevard Heights" loading="lazy">
+          </div>
+          <h2 class="project-title">Boulevard Heights</h2>
+        </article>
+        <article class="project-card" data-category="Commercial" data-type="international">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/DohaCityCenter.avif" alt="Doha City Center" loading="lazy">
+          </div>
+          <h2 class="project-title">Doha City Center</h2>
+        </article>
+        <article class="project-card" data-category="Commercial" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/ICON-Jacobcircle_1.avif" alt="ICON - Jacob circle" loading="lazy">
+          </div>
+          <h2 class="project-title">ICON - Jacob circle</h2>
+        </article>
+        <article class="project-card" data-category="Commercial" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/KanakiaLevels.avif" alt="Kanakia Levels" loading="lazy">
+          </div>
+          <h2 class="project-title">Kanakia Levels</h2>
+        </article>
+        <article class="project-card" data-category="Commercial" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/LotusSkyGarden.avif" alt="Lotus Sky Garden" loading="lazy">
+          </div>
+          <h2 class="project-title">Lotus Sky Garden</h2>
+        </article>
+        <article class="project-card" data-category="Commercial" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/NorthernHills.avif" alt="Northern Hills" loading="lazy">
+          </div>
+          <h2 class="project-title">Northern Hills</h2>
+        </article>
+        <article class="project-card" data-category="Commercial" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/SKSPlanet.avif" alt="Planet SKS" loading="lazy">
+          </div>
+          <h2 class="project-title">Planet SKS</h2>
+        </article>
+        <article class="project-card" data-category="Commercial" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/PrinceAgaKhan.avif" alt="Prince Aga Khan" loading="lazy">
+          </div>
+          <h2 class="project-title">Prince Aga Khan</h2>
+        </article>
+        <article class="project-card" data-category="Commercial" data-type="international">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/PSPFCommercialBuilding.avif" alt="PSPF Commercial Building" loading="lazy">
+          </div>
+          <h2 class="project-title">PSPF Commercial Building</h2>
+        </article>
+        <article class="project-card" data-category="Commercial" data-type="type">
+          <div class="project-image-wrap">
+            <img class="project-image" src="./projects_image/WestlineSignature.avif" alt="Westline Signature" loading="lazy">
+          </div>
+          <h2 class="project-title">Westline Signature</h2>
+        </article>
+      </div>
+    </section>
+  </main>
+
+
+  <div id="site-footer"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+/* ==============================
+   GLOBAL STYLES
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111827;
+    background-color: #f5f6f8;
+}
+
+/* ==============================
+   LOGIN PAGE
+================================ */
+
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #f8f9fb 0%,
+        #f1f3f5 100%
+    );
+}
+
+/* ==============================
+   LOGIN CARD
+================================ */
+
+.login-card {
+    width: 100%;
+    max-width: 404px;
+
+    padding: 28px 29px 29px;
+
+    background-color: #ffffff;
+    border-radius: 16px;
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.13);
+
+    text-align: center;
+}
+
+/* ==============================
+   LOGO
+================================ */
+
+.login-logo {
+    width: 86px;
+    height: 46px;
+
+    margin: 0 auto 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+
+    background-color: #ffffff;
+    border-radius: 13px;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.09);
+}
+
+.logo-icon {
+    font-size: 17px;
+    color: #21429a;
+}
+
+.logo-text {
+    font-size: 11px;
+    font-weight: 500;
+    color: #21429a;
+}
+
+/* ==============================
+   HEADING
+================================ */
+
+.login-heading {
+    margin-bottom: 36px;
+}
+
+.login-heading h1 {
+    font-size: 21px;
+    font-weight: 750;
+    color: #111827;
+
+    margin-bottom: 10px;
+}
+
+.login-heading p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* ==============================
+   LOGIN FORM
+================================ */
+
+.login-form {
+    width: 100%;
+    text-align: left;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 12px;
+    font-weight: 600;
+    color: #1f2937;
+
+    margin-bottom: 5px;
+}
+
+/* ==============================
+   EMAIL INPUT
+================================ */
+
+.form-group input {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 12px;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    background-color: #f7f8fa;
+
+    font-family: inherit;
+    font-size: 12px;
+    color: #111827;
+
+    outline: none;
+
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease,
+                background-color 0.25s ease;
+}
+
+.form-group input::placeholder {
+    color: #7b8492;
+    opacity: 1;
+}
+
+/* Input Focus */
+
+.form-group input:focus {
+    border-color: #3b82f6;
+    background-color: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.10);
+}
+
+/* ==============================
+   PASSWORD INPUT
+================================ */
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    padding-right: 65px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+
+    color: #9ca3af;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.toggle-password:hover {
+    color: #2563eb;
+}
+
+/* ==============================
+   SIGN IN BUTTON
+================================ */
+
+.sign-in-btn {
+    display: block;
+
+    width: 100%;
+    height: 44px;
+
+    margin-top: -3px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        180deg,
+        #4598ff 0%,
+        #1760ff 100%
+    );
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 6px rgba(37, 99, 235, 0.20);
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                filter 0.25s ease;
+}
+
+/* Button Hover */
+
+.sign-in-btn:hover {
+    filter: brightness(0.96);
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* Button Click */
+
+.sign-in-btn:active {
+    transform: translateY(0);
+}
+
+/* Keyboard Accessibility */
+
+.sign-in-btn:focus-visible,
+.toggle-password:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 3px;
+}
+
+/* ==============================
+   TABLET RESPONSIVE
+================================ */
+
+@media screen and (max-width: 768px) {
+
+    .login-page {
+        padding: 30px 20px;
+    }
+
+    .login-card {
+        max-width: 400px;
+    }
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+================================ */
+
+@media screen and (max-width: 480px) {
+
+    .login-page {
+        padding: 20px 16px;
+    }
+
+    .login-card {
+        max-width: 100%;
+        padding: 27px 22px;
+        border-radius: 14px;
+    }
+
+    .login-logo {
+        margin-bottom: 22px;
+    }
+
+    .login-heading {
+        margin-bottom: 30px;
+    }
+
+    .login-heading h1 {
+        font-size: 20px;
+    }
+
+    .login-heading p {
+        font-size: 13px;
+    }
+
+    .form-group {
+        margin-bottom: 22px;
+    }
+
+    .form-group input {
+        height: 45px;
+    }
+
+    .sign-in-btn {
+        height: 45px;
+    }
+}
